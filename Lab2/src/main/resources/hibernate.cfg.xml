@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/group_schedule</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.username">odbc_user</property>
+    <property name="connection.password">12345</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+
+    <mapping class="ru.schedule.lab2.entity.Auditories"/>
+    <mapping class="ru.schedule.lab2.entity.Days"/>
+    <mapping class="ru.schedule.lab2.entity.Groups"/>
+    <mapping class="ru.schedule.lab2.entity.NumberOfWeeks"/>
+    <mapping class="ru.schedule.lab2.entity.Professors"/>
+    <mapping class="ru.schedule.lab2.entity.Schedules"/>
+    <mapping class="ru.schedule.lab2.entity.Subjects"/>
+    <mapping class="ru.schedule.lab2.entity.Times"/>
+    <mapping class="ru.schedule.lab2.entity.Types"/>
+    <mapping class="ru.schedule.lab2.entity.GrSchIdentity"/>
+    <mapping class="ru.schedule.lab2.entity.TimeOfLessons"/>
+
+  </session-factory>
+</hibernate-configuration>
